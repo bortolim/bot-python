@@ -123,7 +123,7 @@ async def mandar_mensagem():
 async def on_voice_state_update(member, before, after):
     if before.channel is None and after.channel is not None:
         if after.channel.id == 1233597795009826944:
-            lista_mensagens = [f"{member.mention} entrou da call", f"{member.mention} finalmente entrou na call", f"{member.mention} OIIIIIIIIIIIIIIIIIIIIIIIIII"]
+            lista_mensagens = [f"{member.name} entrou da call", f"{member.name} finalmente entrou na call", f"{member.name} OIIIIIIIIIIIIIIIIIIIIIIIIII"]
             mensagem = random.choice(lista_mensagens)
             canal = bot.get_channel(1437203672340758681)
             await canal.send(mensagem)
@@ -131,7 +131,7 @@ async def on_voice_state_update(member, before, after):
    
     elif before.channel is not None and after.channel is None:
         if before.channel.id == 1233597795009826944:   
-            lista_mensagens = [f"{member.mention} saiu da call", f"{member.mention} Porque voce saiu da call??😭😭😭😭😭"]
+            lista_mensagens = [f"{member.name} saiu da call", f"{member.name} Porque voce saiu da call??😭😭😭😭😭"]
             mensagem = random.choice(lista_mensagens)
             canal = bot.get_channel(1437203672340758681)
             await canal.send(mensagem)
